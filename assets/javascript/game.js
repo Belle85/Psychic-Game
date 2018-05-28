@@ -1,11 +1,14 @@
-//Generate a random letter and store it in a variable.
+// //Creates an array that lists out all of the options.
+// var randomLetter = ["a";"b";"c";"d";"e";"f";"g";"h";"i";"j";"k";"l";"m";"n";"o";"p";"q";"r";"s";"t";"u";"v";"w";"x";"y";"z"];
 
-//Prompt user and ask to guess a letter from A to Z.
+//  // This function is run whenever the user presses a key.
+//  document.onkeyup = function(event) {
 
-//Check to see if letter is correct. If correct, add +1 to Wins
+// // Determines which key was pressed.
+// var userGuess = event.key;
 
-/*If letter is wrong, prompt user again and ask to try to guess again. Repeat until letter is guessed or until user runs out of attempts.
-If letter not guess, then add +1 to losses.*/
+// // Randomly chooses a choice from the options array. This is the Computer's guess.
+// var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+// //If letter is correct then display the correct letter. Add 1 to Wins.
 
-//If letter is correct then display the correct letter. Add 1 to Wins.
