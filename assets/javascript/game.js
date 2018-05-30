@@ -26,6 +26,7 @@ document.onkeyup = function (event) {
     //Logs in the console what the user guessed.
     console.log(letterGuessed);
 
+    
     //If the user guesses incorrect.
     if (userGuess != computerGuess) {
         maxTries--;//Reduces the number of tries by 1.

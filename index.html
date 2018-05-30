@@ -5,27 +5,37 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Psychic Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Shadows+Into+Light" rel="stylesheet">
     <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <h1> My Psychic Game</h1>
-    <p>Guess what letter I am thinking of.</p>
-    <p> Wins:
+    <div class="main-container">
+    <h1 class="myTitle"> My Psychic Game</h1>
+    <p id="guessWhat">Guess what letter I am thinking of.</p>
+    <hr>
+    <p class="counters"> Wins:
         <span id="wins"></span>
     </p>
-    <p> Losses:
+    <hr>
+    <p class="counters"> Losses:
         <span id="losses"></span>
     </p>
-    <p> Guesses left:
+    <hr>
+    <p class="counters"> Guesses left:
         <span id="guessesLeft"></span>
     </p>
-    <p> Your guesses so far:
+    <hr>
+    <p class="yourGuesses"> Your guesses so far:
+        <br><br>
         <span id="guessed"></span>
     </p>
+    </div>
+    <div class="smallContainer">
+        <h2>Good Luck!</h2>
+    </div>
 </body>
 
 </html>
