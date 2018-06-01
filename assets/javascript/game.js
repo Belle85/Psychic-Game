@@ -11,6 +11,15 @@ var maxTries = 10;
 //Create variable for the computer random guesses.
 var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+//Function to reset the game to 0.
+function reset() {
+    maxTries = 10;//Resets the number of tries to 10.
+    letterGuessed = [];//Clears the letter already guessed.
+    computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];//Computer makes another letter choice.
+    document.getElementById("guessesLeft").innerHTML = maxTries;//Displays the guesses left in the HTML document.
+    document.getElementById("guessed").innerHTML = letterGuessed;//Displays the letter guessed in the HTML document. 
+}
+
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
 
@@ -34,10 +43,7 @@ document.onkeyup = function (event) {
             losses++//Add one to the losses counter.
             document.getElementById("losses").innerHTML = losses;//Displays the losses in the HTML document.
             alert("GAME OVER! Try again!");//Pop up.
-            maxTries = 10;//Resets the number of tries to 10.
-            letterGuessed = [];//Clears the letter already guessed.
-            computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];//Computer makes another letter choice.
-           
+            reset();
         }
         document.getElementById("guessesLeft").innerHTML = maxTries;//Displays the guesses left in the HTML document.
         document.getElementById("guessed").innerHTML = letterGuessed;//Displays the letter guessed in the HTML document.
@@ -47,6 +53,8 @@ document.onkeyup = function (event) {
         wins++;//Increases the number of wins by 1.
         document.getElementById("wins").innerHTML = wins;//Displays the wins in the HTML document.
         alert("You won! Try again!");//Pop up.
+        reset();
     }
+
 }
 
